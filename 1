@@ -1,0 +1,33 @@
+#include<iostream>
+class Cs
+{
+	public:
+		
+		Cs(int scd)
+		{
+			seconds=scd;
+			
+		}
+		
+		void printdisp()
+		{
+			std::cout<<seconds<< "cekundi"<<std::endl;
+						
+		}
+	int seconds;	
+};
+
+
+Cs operator + (Cs c1, Cs c2)
+{
+	return Cs(c1.seconds + c2.seconds);
+}
+
+int main()
+{
+	Cs c1(10);
+	Cs c2(20);
+	Cs c3 = c1+c2;
+	c3.printdisp();
+	return 0;	
+}
